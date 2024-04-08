@@ -1,0 +1,53 @@
+How to create a script?
+In package.json
+
+For Development -   "start": "parcel index.html",
+For Production -   "build": "parcel build index.html"
+
+React Element is an Object When we render it to DOM then it will be converted to HTML
+
+
+JSX is not a part of React
+JSX is HTML like syntax
+
+JSX stands for JavaScript XML. It's a syntax extension for JavaScript that lets you write HTML-like code directly within your JavaScript files.JSX is not HTML inside Javascript.JSX is a tool that simplifies building UIs with React by allowing you to write HTML-like code within JavaScript. It improves readability, makes it easier to work with UI components, and lets you create dynamic content.
+
+
+Browser cannot understand JSX. It will throw an error.
+const jsxHeading = <h1 id="jsxHeading">Namaste React 🚀 by JSX</h1>
+
+So how it is running?
+The JSX code is transpiled before going to JS Engine.The conversion is done by `PARCEL`- `Babel`
+Parcel is Manager. The transpiling is done by Babel
+
+Babel takes your JSX and convert it into React Code.
+
+JSX => Babel transpiles it to Reacr.createElement() => ReactElement-(JS Obkect) => HTMLElement(render)
+TRY BABEL - https://babeljs.io/
+
+Like some old browsers doesn't understand ES6 syntax.So BABEl convert ES^ code to that code which is understable by them 
+
+if you have to give Attribute to JSX use `camelCase` of HTML
+
+if you are writing JSX in multiple line `USE ()` Write code inside ()
+
+
+
+React Components
+1. Class Based Components - OLD 
+2. Functional Components - NEW 
+
+Functional Components - Just a Normal Component
+
+// root.render(jsxHeading) -> For rendering React Element
+// root.render(<HeadingComponent />);  -> For rendering React Component 
+
+<HeadingComponent></HeadingComponent> === <HeadingComponent /> === {HeadingComponent()}
+
+
+<HeadingComponent /> - Thats how Babel understand it
+
+In JSX code { `inside this` } you can run any type of JavaScript Expression
+
+JSX prevents Cross Site Scripting Attacks (XSS)
+It sanitizes everything which we write this {}

@@ -100,3 +100,5 @@ because it is treating App,js a normal file but it is not it can understand ` im
 
 When you run npx parcel build index.html you will get into an error 
 You have to remove `  "main": "App.js", ` this line from package.json because its conflicting with parcel
+
+- BrowserList
