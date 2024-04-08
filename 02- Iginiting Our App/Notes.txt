@@ -97,3 +97,6 @@ cannot have imports or
 
 Add type="module"     <script type="module" src="./App.js"></script>
 because it is treating App,js a normal file but it is not it can understand ` import ` keyword 
+
+When you run npx parcel build index.html you will get into an error 
+You have to remove `  "main": "App.js", ` this line from package.json because its conflicting with parcel
