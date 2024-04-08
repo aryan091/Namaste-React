@@ -1,0 +1,99 @@
+Package.Json is a configuration for NPM
+
+There are two types are dependencies in NPM
+1. Dependencies - It is used in Production also
+2. DevDependencies - It is generally required in Dev Phase
+
+
+` & ^ in package.Json
+
+^ - Automatically install Minor Updates
+~ - Automatically install Major Updates 
+
+Diff b/w package.json and package-lock.json
+
+package.Json is a configuration for NPM
+package-lock.json - keep track of exact version
+
+Integrity - Hash of the file - What is in my local it should be same in production 
+This hash is because it is used to verify the integrity of the file
+
+Why node modules came along parcel because parcel is somehow dependent on them.
+Parcel need them none of this is garbage
+
+This is parcel package.json
+
+{
+  "name": "@parcel/bundler-default",
+  "version": "2.12.0",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parcel-bundler/parcel.git"
+  },
+  "main": "lib/DefaultBundler.js",
+  "source": "src/DefaultBundler.js",
+  "engines": {
+    "node": ">= 12.0.0",
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "@parcel/diagnostic": "2.12.0",
+    "@parcel/graph": "3.2.0",
+    "@parcel/plugin": "2.12.0",
+    "@parcel/rust": "2.12.0",
+    "@parcel/utils": "2.12.0",
+    "nullthrows": "^1.1.1"
+  },
+  "gitHead": "2059029ee91e5f03a273b0954d3e629d7375f986"
+}
+
+Like all these are dependencies mentioned there got installed
+
+What ever you can regenerate don't put it on Git
+
+NPM doesn't stands for Node Package Manager
+
+npx - is an alias for npm - executing a package
+
+CDN Links is not a good way to integrate react to your app
+Beacuse it is costly operation
+
+npm i is short form of npm install
+
+You will get a error
+
+@parcel/transformer-js:
+ Browser scripts      
+cannot have imports or
+ exports.
+
+  D:\Namaste React\02- Iginiting Our App\App.js:1:1
+  > 1 | import React f
+  >   | ^^^^^^^^^^^^^^
+    2 | import ReactDO
+    3 |
+
+  D:\Namaste React\02- Iginiting Our App\index.html:13:5
+    12 |
+  > 13 |     <script s
+  >    |     ^^^^^^^^^ The environment was originally created here
+    14 |   </body>    
+    15 | </html>      
+
+  💡 Add the 
+     type="module"    
+     attribute to the 
+     <script> tag.    
+  📝 Learn more:      
+     https://parceljs.org/languages/javascript/#classic-scripts   
+
+Add type="module"     <script type="module" src="./App.js"></script>
+because it is treating App,js a normal file but it is not it can understand ` import ` keyword 

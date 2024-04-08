@@ -39,3 +39,7 @@ root.render(parent);
 
 // Render method is converting this heading object into HTML element
 // ReactElement(Object) => HTML(Browser Undreadable)
+
+// <!-- Everything inside the root get replaced by render method -->
+
+// We can use React only a small portion of Web Page
