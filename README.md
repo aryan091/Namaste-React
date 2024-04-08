@@ -5,3 +5,8 @@
 - Local Server
 - HMR - Hot Module Replacement
 - File Watching Algorithim - Written In C++
+- Caching - Faster Builds
+- Image Optimization
+- Minification
+- Bundling
+- Compressing
