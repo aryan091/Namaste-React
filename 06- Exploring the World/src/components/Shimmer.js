@@ -3,6 +3,10 @@ const Shimmer = () => {
     return (
         <div className="shimmer-wrapper">
             <div className="filter">
+            <div className="search">
+            
+            <button className="shimmer-btn" ></button>
+          </div>
           <button className="shimmer-btn" ></button>
           <button className="shimmer-btn" ></button>
         </div>

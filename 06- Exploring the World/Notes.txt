@@ -44,3 +44,8 @@ Conditional Rendering - if(listOfRestaurants.length === 0)
                          return <Shimmer/>
 
 If a single change will be in a component whole component gets rendered again
+
+Bind value to input tag - use value={useState variable}
+Cant seem typing it in input - use onChange={} because we have to capture value
+
+While typing a text in input are in Body component - the body component will get re-rendered
