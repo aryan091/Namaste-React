@@ -1,2 +1,30 @@
+Two types of Export 
+
+1. Default export - export default Header - import Header from ''
+2. Named export - export { c1 , c2 } - import { c1 , c2 } from ''
+
 In single component - export default work
 In more than one - export { c1 , c2 } - named export
+
+A hook is normal Javascript Utility function given to us by React
+
+Whenever a State variable updates React re-render the component
+
+React keep your `UI Layer` sync with `Data Layer`
+
+How React works behind the scenes?
+
+REACT RECONCILIATION ALGORITHM aka REACT FIBER- https://medium.com/javarevisited/react-reconciliation-algorithm-86e3e22c1b40
+
+VIRTUAL DOM (Normal JS Object)- is a representation of Actual DOM
+
+DIFF ALGORITHM - Find difference b/w Old VDOM and Updated VDOM
+It will calculate the difference and update Actual DOM in the most efficient way
+
+REACT FIBER ARCHITECTURE - https://github.com/acdlite/react-fiber-architecture
+
+const [listOfRestaurants , setListOfRestaurants] = useState(restaurants)
+
+These two variables act as trigger to start diff algorithm
+
+useState() - returns Array
