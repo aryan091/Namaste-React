@@ -9,6 +9,6 @@ When we are looping on Components we have to pass key as a props
 All components have to be their unique Id for better optimizations
 
 if we don't use key React re-renders all the Components
-By `key` react can indetif it and re renders that particular Component
+By `key` react can identify it and re renders that particular Component
 
 Never use index as Key in React

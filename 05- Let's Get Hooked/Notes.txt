@@ -1,0 +1,2 @@
+In single component - export default work
+In more than one - export { c1 , c2 } - named export
