@@ -69,3 +69,8 @@ Types of Routing in Web Apps
 - Server Side Routing - Make a network call and page is coming from server
 
 We are implementing Client Side Routing
+
+
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=804071
+
+https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999
