@@ -1,0 +1,25 @@
+{
+  "name": "food-app-routing",
+  "version": "1.0.0",
+  "description": "In this episode we will learn about React Routing",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "react-router"
+  ],
+  "author": "Aryan Daftari",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
