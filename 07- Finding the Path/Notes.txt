@@ -7,5 +7,65 @@ If Dependency Array is empty then it will only called on initial render(just onc
 
 If we put data in Dependency Array it will be called on every rerender when dependency is changed
 
+createBrowserRouter - by using this method we create configuration for our routes
+
 RouterProvider - provides the routing configuration to the app
 Now we will render through Router Provider 
+
+as we know we have header everywhere only body changes how to achieve it add all path configuration to app router children
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout />,
+        children: [
+            {
+                path: "/",
+                element: <Body />,
+                errorElement: <Error />
+            }
+            ,
+            {
+                path: "/about",
+                element: <About />,
+                errorElement: <Error />
+            }
+            ,
+            {
+                path: "/contact",
+                element: <Contact />,
+                errorElement: <Error />
+            }
+        ],
+        errorElement: <Error />
+    }
+    ,
+    
+])
+
+
+const AppLayout = () => {
+
+    return (
+            <div className="app">
+                <Header />
+                <Outlet /> // On whichever children link we are this outlet will get replaced by that component
+            </div>
+    )
+}
+
+import { useRouteError } from 'react-router-dom'
+we use useRouteError - to get better error messages
+
+
+                <a href "/"></a>  VS <Link to "/"></Link>
+
+Don't use <a href "/"></a> tag  Don't use Anchor tag because it reloads hence whole dom re-renders
+
+Use <Link to "/"></Link> tag  Don't use Anchor tag because it doesn't render the whole dom 
+
+Types of Routing in Web Apps
+- Client Side Routing - It already have a component inside it 
+- Server Side Routing - Make a network call and page is coming from server
+
+We are implementing Client Side Routing
