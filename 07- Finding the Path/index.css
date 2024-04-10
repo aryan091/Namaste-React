@@ -50,15 +50,21 @@
 .restaurant-card,
 .shimmer-card {
   width: 300px;
-  height: 500px;
+  height: auto; /* Adjust height to auto to allow content to expand */
   background-color: #f0f0f0;
+  padding: 10px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow: hidden; /* Hide any overflowing content */
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .restaurant-card:hover {
   border: 1px solid black;
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(0.95);
 }
 
 .filter-btn,
@@ -75,6 +81,7 @@
   height: 50%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow */
   object-fit: cover;
+  max-width: 100%;
   
 }
 

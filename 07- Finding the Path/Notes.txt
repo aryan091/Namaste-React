@@ -1,51 +1,11 @@
-Monolith Architecture - All Service is in One Place.So if we do a little change we have to again build it and then deploy it for a small change
+Lets talk about useEffect()
 
-In Monolith Architecture we are bound to use a same Tech all over the place
+useEffect(() => {}, [])
+          CB Func  , Dependency Array
 
-Microservices - All these service combined together form a Big App
+If Dependency Array is empty then it will only called on initial render(just once)
 
-Seperation Of Concerns 
+If we put data in Dependency Array it will be called on every rerender when dependency is changed
 
-All services have to talk with each other
-
-All these service is Deployed
-
-On different ports we deployed different service
-
-How to this React service talk to the World?
-by API Call 
-
-When we can make API Call
-
-Approach 1 - As soon as pages load it will make API Call wait for data then render to UI
-
-Approach 2 - As soon as pages loads we will just render our UI - Now we can make an API call - when data comes - we rerender it with populated data
-
-In React - we use Approach 2 - It gives us better UX
-
-If you have to do something after the rendering - useEffect callback function calls after the component renders When the body component will render it will quickly call the function inside it
-
-CORS - Cross Origin Resource Sharing - is a mechanism which uses additional HTTP headers to tell a browser whether the specific web app can share resource to another web app if then have different mechanism
-
-When  Origin A try to get data from Origin B
-
-     1. Preflight Call Goes
-Origin A ----------------------------> OriginB
-            2. Valid Call or Not
-Origin A <---------------------------- OriginB
-            3. Actual Call Goes / Post
-Origin A <---------------------------- OriginB
-
-Accept-Control-Allow-Origin - * - All Domian can access it
-
-Server can restrict severals methods also
-
-Conditional Rendering - if(listOfRestaurants.length === 0)
-                         return <Shimmer/>
-
-If a single change will be in a component whole component gets rendered again
-
-Bind value to input tag - use value={useState variable}
-Cant seem typing it in input - use onChange={} because we have to capture value
-
-While typing a text in input are in Body component - the body component will get re-rendered
+RouterProvider - provides the routing configuration to the app
+Now we will render through Router Provider 

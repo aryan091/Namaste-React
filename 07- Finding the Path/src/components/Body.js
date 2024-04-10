@@ -20,7 +20,7 @@ const Body = () => {
 
       const resData = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
 
-      console.log(resData)
+
       setListOfRestaurants(resData)
       setFilteredRestaurant(resData)
 
@@ -29,12 +29,11 @@ const Body = () => {
     }
     
     const handleClick = () => {
-        let filteredList = listOfRestaurants.filter((res) => res?.info?.avgRating >= 4.5)
+        let filteredList = listOfRestaurants.filter((res) => res?.info?.avgRating >= 4.0)
        
         setFilteredRestaurant(filteredList);
 
-        console.log(listOfRestaurants.length,"ListOfRes len - ")
-        console.log(filteredRestaurant.length,"FilOfRes len - ")
+        
     }
     const handleSearch = () => {
       const filteredRestaurant = listOfRestaurants.filter((res) => {
@@ -49,8 +48,7 @@ const Body = () => {
       setFilteredRestaurant(listOfRestaurants)
       setSearchText("")
 
-      console.log(listOfRestaurants.length,"ListOfRes len - ")
-        console.log(filteredRestaurant.length,"FilOfRes len - ")
+      
   }
 
     const handleSearchChange = (e) => {
