@@ -1,0 +1,59 @@
+REACT COMPONENT LIFECYCLE - https://medium.com/@arpitparekh54/understanding-the-react-component-lifecycle-a-deep-dive-into-the-life-of-a-react-component-74813cb8dfb5
+
+/****
+ *
+ * --- MOUNTING ----
+ *
+ * Constructor (dummy)
+ * Render (dummy)
+ *      <HTML Dummy >
+ * Component Did MOunt
+ *      <API Call>
+ *      <this.setState> -> State variable is updated
+ *
+ * ---- UPDATE
+ *
+ *      render(APi data)
+ *      <HTML (new API data>)
+ *      ccomponentDid Update
+ *
+ *
+ *
+ *
+ */
+
+ Q.) What is the flow of a lifecycle of a parent.?
+ A,) 
+     - Parent Constructor Called
+     - Parent Render Called 
+     - Parent componentDidMount called
+
+ Q.) Why react run componentDidMount of children later ?
+ A.) For example if we have a childrm component inside a parent component
+     it will run it's componentDidMount first and then run its parent's
+
+     Let see the order
+
+     - Parent Constructor Called
+     - Parent Render Called 
+
+        
+
+    - It batches the render phase of children together so it can renders or    inserts all HTML into the DOM efficiently in a Single Batch.Because DOM rerendering is a costly operation.So here React optimally did it
+
+    --------------------------------------------
+    |    - Child 1 Constructor Called          |
+    |    - Child 1 Render Called               |
+    |                                          |
+    |    - Child 2 Constructor Called          |
+    |    - Child 2 Render Called               |
+    |                                          |
+    --------------------------------------------
+
+        - Child 1 componentDidMount called    
+        - Child 2 componentDidMount called
+     - Parent componentDidMount called
+
+useEffect and componentDidMount are not the same, but they can be used to accomplish some of the same tasks. ComponentDidMount is called once the page is mounted, but it can't be called again. useEffect is called after every render, but it can be configured to only run once.
+
+DIVE DIVE IN `useEffect()` - https://medium.com/@ralph1786/brief-introduction-to-react-hooks-b44aa5d3a1f5
