@@ -27,3 +27,7 @@
 # Types of Routing in Web Apps
 - Client Side Routing
 - Server Side Routing
+
+# OPTIMIZATIONS
+- Single Responsibility Principle - SRP
+- Chunking / Bundling / Code Splitting / Dynamic Bundling / On Demand Loading / Lazy Loading 
