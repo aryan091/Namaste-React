@@ -28,6 +28,6 @@
 - Client Side Routing
 - Server Side Routing
 
-# OPTIMIZATIONS
+# Optimizations
 - Single Responsibility Principle - SRP
 - Chunking / Bundling / Code Splitting / Dynamic Bundling / On Demand Loading / Lazy Loading 
