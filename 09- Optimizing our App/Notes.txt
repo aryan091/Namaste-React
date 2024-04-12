@@ -1,1 +1,63 @@
-Single Responsibility Principle - SRP
+                           OPTIMIZATIONS
+
+               1.Single Responsibility Principle - SRP
+
+if we check our Restaurant Menu Component
+
+- We are Getting Data from API
+- We are displaying it to UI
+
+So, kind of there is two reponsibilty of Restaurant Menu Component that is not ideal for SRP - Single Responsibility Principle
+
+So we can make our ` Custom Hook ` that will fetch data from API
+
+So Restaurant Menu Component only have to worry about displaying data to UI
+
+Benefits
+- It will make our code modular , maintainable , reusable
+- It will make our code easier to test
+- It will make our code easier to maintain
+- It will make our code easier to debug
+- It will make our code easier to read
+
+2. Chunking / Bundling / Code Splitting / Dynamic Bundling / On Demand Loading / Lazy Loading 
+
+Let's say if we our store integreted like - Swiggy InstaMart , Uber Eats    
+
+Let's understand it like in this way like in a Large Scale Application we can have 1000 of components so when we do a production build all files will be bundled together into a single js file.
+
+What are the problems in single js file?
+- Large file size that can take time to load in slow network area
+- File size will increase as we add more components
+
+So we can optimize it through create different bundle for different entity
+So when app app loads it will not load all the components when we go on that component it will only load that particular component
+
+For example : Travel planning apps can have different bundle of Trains , Buses , flights , ... etc
+
+Benefits
+- Creating different bundle for different entity makes less file sizes and we can only load particular bundle whwn it is requested by user
+
+We can achieve this thing by ` lazy loading ` aka ` on demand loading `
+
+How to perform Lazy Loading
+We will use ` React.lazy ` to do it 
+
+const Grocery = lazy( () => import("./components/Grocery") )
+
+You will get a error - A component suspended while responding to synchronous input
+
+Q.) Why did it happen?
+A.) When we load the app we only have one file it doesn't have grocery code in it
+
+React is very fast when it try to load grocery component it took some time so react suspended the rendering
+
+Fix - the time it take to fetch the grocery component the times it takes we have react to give something to render by using `Suspense Component`
+
+path: "/grocery",
+                element: <Suspense fallback={<Shimmer />}>
+                    <Grocery />,
+                </Suspense>,
+                errorElement: <Error />
+
+We have to wrap our component in `Suspense Component`

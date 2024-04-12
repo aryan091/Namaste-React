@@ -3,7 +3,7 @@ import { useState , useEffect } from "react";
 import Shimmer from "./Shimmer"
 import { Link } from 'react-router-dom';
 
-
+import useOnlineStatus from "../utils/useOnlineStatus"
 
 const Body = () => {
 
@@ -60,8 +60,11 @@ const Body = () => {
       setSearchText(e.target.value)
     }
 
+    const onlineStatus = useOnlineStatus()
 
-    // if(listOfRestaurants.length === 0) return <Shimmer/>
+    if(!onlineStatus){
+      return <h1>🔴 OFFLINE</h1>
+    }
 
     return listOfRestaurants.length === 0 ? <Shimmer/> : (
       
