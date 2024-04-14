@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard , { withTopRatedLabel } from "./RestaurantCard";
 import { useState , useEffect } from "react";
 import Shimmer from "./Shimmer"
 import { Link } from 'react-router-dom';
@@ -10,6 +10,9 @@ const Body = () => {
     const [listOfRestaurants , setListOfRestaurants] = useState([])
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const [searchText , setSearchText] = useState("")
+
+    // Using Higher Order Function
+    const RestaurantCardTopRated = withTopRatedLabel(RestaurantCard)
   
     useEffect(() => {
       fetchData()
@@ -66,6 +69,7 @@ const Body = () => {
       return <h1>🔴 OFFLINE</h1>
     }
 
+
     return listOfRestaurants.length === 0 ? <Shimmer/> : (
       
       <div className="body shadow-lg">
@@ -97,9 +101,11 @@ const Body = () => {
              <Link
              to={"/restaurant/" + res?.info?.id}
              key={res?.info?.id}
-             
              >
-            <  RestaurantCard resData = {res} />
+
+              {res?.info?.avgRating >= 4.0 ? <RestaurantCardTopRated resData = {res} /> : <  RestaurantCard resData = {res} /> }
+            
+
             </Link>
           )
           )

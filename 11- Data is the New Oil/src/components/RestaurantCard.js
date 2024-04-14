@@ -34,4 +34,22 @@ const RestaurantCard = (props) => {
     )
 }
 
+// HIGHER ORDER FUNCTION
+
+// Input => RestaurantCard .. Output => Enhanced RestaurantCard
+
+export const withTopRatedLabel = (RestaurantCard) => {
+
+    return (props) => {
+        
+        return(
+            <div>
+            <label className="absolute bg-black text-white font-semibold text-xs m-1 p-1 mx-2 z-10 ">TOP RATED</label>
+            <RestaurantCard {...props} />
+        </div>
+        )
+
+    }
+}
+
 export default RestaurantCard

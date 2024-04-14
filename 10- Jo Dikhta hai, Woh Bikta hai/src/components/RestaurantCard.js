@@ -16,7 +16,8 @@ const RestaurantCard = (props) => {
 
     const{deliveryTime} = resData?.info?.sla
 
-    console.log( resData)
+    console.log("Type of delivery is ",typeof deliveryTime)
+    // console.log( resData)
     
 
     return(

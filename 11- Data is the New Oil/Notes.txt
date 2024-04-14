@@ -1,0 +1,4 @@
+                                    HIGHER ORDER FUNCTION
+
+A function which can take function as an argument and return function as a argument is called higher order function
+
