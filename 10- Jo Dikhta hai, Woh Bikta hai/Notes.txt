@@ -1,0 +1,4 @@
+Parcel uses `.postcssrc` to under `tailwind`
+
+Configure tailwind using this link - https://tailwindcss.com/docs/guides/parcel
+Tailwind is very lightweight
