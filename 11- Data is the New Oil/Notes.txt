@@ -2,4 +2,27 @@
 
 A function which can take function as an argument and return function as a argument is called higher order function
 
-How to manage data properly? 
+In our Menu we have accordians if we click one to open it will open it
+When we click other accordians upper one will be opened only
+
+So i want build a feature if one accordians is opened and i click on other accordians upper one should be closed
+Solution - We give that power to parent component
+
+Controlled Component -> Which is controoled by parent component
+Un-Controlled Component -> Which is not controoled by any parent component
+
+LIFTING THE STATE UP - https://medium.com/developers-keep-learning/lifting-state-up-in-react-32792f188c5c 
+
+PROPS DRILLING 
+
+Problem - Login User Info To all components
+
+For solving this problem we can use Context API - (Central Storage For Data)
+
+How to use in Class Based Component
+
+Let's say our context na,me is UserContext
+
+<UserContext.Consumer>
+{(data) => console.log(data)} We can access data here
+</UserContext.Consumer>
