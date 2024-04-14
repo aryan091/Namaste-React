@@ -1,4 +1,4 @@
-import React , { lazy, Suspense} from "react";
+import React , { lazy, Suspense, useEffect, useState} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,16 +9,31 @@ import Error from "./components/Error";
 
 import { createBrowserRouter, RouterProvider , Outlet} from "react-router-dom";
 import Shimmer from "./components/Shimmer";
+import UserContext from "./context/UserContext";
 
 
 const Grocery = lazy( () => import("./components/Grocery") )
 const AppLayout = () => {
 
+    const [ userInfo , setUserInfo] = useState()
+
+    // Authentication
+    useEffect(() => {
+        // API Call
+        const data = {
+            name: "Aryan"
+        }
+
+        setUserInfo(data.name)
+    })
+
     return (
+            <UserContext.Provider value={{loggedInUser : userInfo}}>
             <div className="app">
                 <Header />
                 <Outlet />
             </div>
+            </UserContext.Provider>
     )
 }
 

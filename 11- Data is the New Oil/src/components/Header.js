@@ -1,10 +1,13 @@
 import { LOGO_URL } from "../utils/constants"
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../utils/useOnlineStatus"
+import { useContext } from "react"
+import UserContext from "../context/UserContext"
 
 const Header = () => {
 
     const onlineStatus = useOnlineStatus()
+    const user = useContext(UserContext)
 
     return(
 
@@ -20,6 +23,7 @@ const Header = () => {
                     <li className="font-bold text-gray-500"><Link to="/contact">Contact Us</Link></li>
                     <li className="font-bold text-gray-500"><Link to="/grocery">Grocery</Link></li>                    
                     <li className="font-bold text-gray-500">Cart</li>
+                    <li className="font-bold text-gray-500">{user.loggedInUser}</li>
                 </ul>
             </div>
         </div>

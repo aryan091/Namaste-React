@@ -19,6 +19,19 @@ Problem - Login User Info To all components
 
 For solving this problem we can use Context API - (Central Storage For Data)
 
+
+import { createContext } from "react";
+
+const UserContext = createContext(
+    {
+        loggedInUser : "Aryan Daftari"
+    }
+);
+
+export default UserContext;
+
+we can access loggedInUser anywhere in any component
+
 How to use in Class Based Component
 
 Let's say our context na,me is UserContext
