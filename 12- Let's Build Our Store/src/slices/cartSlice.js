@@ -10,7 +10,7 @@ const cartSlice = createSlice({
             state.items = [...state.items, action.payload]
         },
         removeFromCart: (state, action) => {
-            state.items = state.items.pop()
+            state.items = state.items.filter((item) => item.card.info.id !== action.payload.card.info.id)
         },
         clearCart: (state) => {
             state.items = [] // Mutated the state

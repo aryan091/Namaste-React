@@ -27,7 +27,7 @@ const ResturantCategory = ({ data, showItems, setShowIndex, currentIndex, index 
           </span>
           <span>🔻</span>
         </div>
-        {showItems && <ItemList items={data.itemCards}  />}
+        {showItems && <ItemList items={data.itemCards} isCart={false} />}
       </div>
     </div>
   );
