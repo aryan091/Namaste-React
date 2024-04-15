@@ -1,0 +1,73 @@
+                                    Optimizations
+
+                       1. Single Responsibility Principle - SRP
+
+Each component should have only one responsibility - ( Separation of concerns )
+
+Benefits
+- Modularity
+- Easy Debugging
+- Code Maintainability
+- Readable
+
+Hooks are `Utility Functions`
+
+Like our Restaurant Menu have two Responsibilities
+- Fetching Data
+- Rendering UI
+
+So we will make it modular by using `Custom Hooks` that will fetch data and Restaurant Menu will render it
+
+While creating `Custom Hooks` think about what should be the `input` and what should be the `output`
+
+const restaurantInfo = useRestaurantMenu(id) // In Restaurant Menu
+
+2. Chunking / Bundling / Code Splitting / Dynamic Bundling / On Demand Loading / Lazy Loading
+
+if we have a travel site they have information regarding Planes , Hotel , Buses etc.All the the three components.So we have to break in down in small different bundles.When user request/demands a component we will load that component for them
+
+We can have three separates bundles for
+- Planes
+- Hotel
+- Bus
+
+When we build a project the Bundler bundles our code in a single file.You can say all 1000 components are bundled in 1 file.That will make our file bigger and it will be slower to load
+
+So for overcoming this issue we can use Chunking / Bundling / Code Splitting / Dynamic Bundling / On Demand Loading / Lazy Loading
+
+So when our app loads the grocery code is not present on it when a user requests it the grocery component will get loaded
+
+Benefits
+- Small file size
+- Faster loading
+
+
+So we have a Grocery component to mimic a grocery store for Lazy loading
+
+How to import it in App.js
+
+`
+const Grocery = lazy( () => import("./components/Grocery") )
+
+`
+                {
+                path: "/grocery/",
+                element: <Grocery />,
+                errorElement: <Error />
+
+            }
+When will we try to load it
+We will get Error that react suspended the rendering of the element
+
+Why it suspended it - Because while loading component it take some time and js is very fast it cannot wait for it so it doesn't block his thread and it will suspend the rendering of a component
+
+
+Solution We case Use `Suspense` component that will render something until the component is loaded
+            {
+                path: "/grocery",
+                element: <Suspense fallback={<Shimmer />}>
+                    <Grocery />,
+                </Suspense>,
+                errorElement: <Error />
+            }
+
