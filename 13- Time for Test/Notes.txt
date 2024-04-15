@@ -1,0 +1,39 @@
+                                    REDUX TOOLKIT   
+
+
+FLUX - RTK
+
+Redux is State Management Library
+Redux work in DATA LAYER 
+Redux offers easy debugging
+
+There are two libraries that redux team offers - Redux and Redux Toolkit
+
+React Redux - it is a bridge between React and Redux
+Redux Toolkit 
+
+We have Slices , Dispatcher , Reducers , Selectors
+
+Redux Store is a JS object with lot of data inside it kept in a global scope
+What is Slices - Logical Separation - like UserSlice, CartSlice
+
+Redux uses - Immer Js - Finding diff b/w Mutated State and Original State and gives back the new immutable state 
+
+IMMER LIBRARY - https://www.npmjs.com/package/immer
+
+When we click on Add button it dispatches action which call the reducer function that modifies the slice of the store
+
+Getting Data from Store using Selectors also known as Subscribing to the Store 
+
+As our Cart is in Header - The Header component is subscribed to this store using a Selector
+
+RTK - Either Mutate the existing state or return a new state
+
+Make sure you are Subscribing right portion of store for optimization purpose
+
+const cartItems = useSelector((store) => store.cart.items)  ✅
+const cartItems = useSelector((store) => store) ❌
+
+Use Reducer and Reducers carefully
+
+RTK QUERY - https://redux-toolkit.js.org/tutorials/rtk-query
