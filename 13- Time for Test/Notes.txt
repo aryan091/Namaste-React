@@ -17,7 +17,14 @@ Setting Up testing in our app
 - Install Jest
 - Install Babel Dependencies
 - Configure Babel 
+- Configure Parcel config file to disable default Babel Transpilation 
 
 Parcel already uses `Babel` and it has its own configuration for Babel
 
 So we will have a conflict with Parcel.So we will have to change parcel behavior
+
+When you run - `npm run test`
+if you will get that output - No tests found, exiting with code 1 
+
+Congratulation you have successfully configured  React Testing Library - Jest - Babel - Parcel
+
