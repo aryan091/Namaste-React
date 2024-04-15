@@ -17,7 +17,9 @@ Setting Up testing in our app
 - Install Jest
 - Install Babel Dependencies
 - Configure Babel 
-- Configure Parcel config file to disable default Babel Transpilation 
+- Configure Parcel config file to disable default Babel Transpilation - https://parceljs.org/languages/javascript/#babel
+- Jest Configuration - npx jest --init - https://jestjs.io/docs/getting-started
+- Install JsDom Library - npm install --save-dev jest-environment-jsdom - https://testing-library.com/docs/react-testing-library/setup#jest-28
 
 Parcel already uses `Babel` and it has its own configuration for Babel
 
@@ -28,3 +30,9 @@ if you will get that output - No tests found, exiting with code 1
 
 Congratulation you have successfully configured  React Testing Library - Jest - Babel - Parcel
 
+JS-DOM - Jsdom is a JavaScript implementation of the WHATWG DOM and HTML standards, for use with Node.js. It provides a way to create and manipulate a virtual DOM in Node.js, which can be useful for testing, scraping, and other purposes.
+
+Testing Environment
+
+
+For writing test cases we have to first make a folder named '__tests__' in our app

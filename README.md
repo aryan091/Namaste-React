@@ -52,3 +52,5 @@
 - Install Babel Dependencies
 - Configure Babel 
 - Configure Parcel config file to disable default Babel Transpilation 
+- Jest Configuration - npx jest --init
+- Install JsDom Library - npm install --save-dev jest-environment-jsdom
