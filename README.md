@@ -40,3 +40,15 @@
 - Slice ( cartSlice )
 - Dispatch ( action )
 - Selector
+
+# Types of Testing ( Developer )
+- Unit Testing - Developer test the component in Isolation - Single Component
+- Integration Testing - Multiple Components 
+- End to End Testing ( e2e Testing )  - Test all the flows
+
+# Setting Up testing in our app
+- Install React Testing Library
+- Install Jest
+- Install Babel Dependencies
+- Configure Babel 
+- Configure Parcel config file to disable default Babel Transpilation 
