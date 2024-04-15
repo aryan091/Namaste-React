@@ -36,3 +36,49 @@ Testing Environment
 
 
 For writing test cases we have to first make a folder named '__tests__' in our app
+__ = Dunder
+
+It takes two Arguments - test(String , cb func)
+
+Write our first Test Case
+
+Write Sum.js in component folder
+
+        Sum.js 
+
+        export const sum = (a, b) => {
+            return a + b;
+        };
+
+Write sum.test.js in component folder
+
+        import { sum } from "../src/components/Sum";
+
+        test("Sum function should caculate the sum of two numbers", () => {
+        const result = sum(3, 4);
+
+        //Assertion
+        expect(result).toBe(7);
+        });
+
+
+
+PS D:\Namaste React\13- Time for Test> npm run test
+
+> app-test@1.0.0 test
+> jest
+
+ PASS  __tests__/sum.test.js
+  √ Sum function should caculate the sum of two numbers (3 ms)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |      100 |     100 |     100 |                   
+ Sum.js   |     100 |      100 |     100 |     100 |                   
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.083 s
+Ran all test suites.
