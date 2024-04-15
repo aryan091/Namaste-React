@@ -31,3 +31,12 @@
 # Optimizations
 - Single Responsibility Principle - SRP
 - Chunking / Bundling / Code Splitting / Dynamic Bundling / On Demand Loading / Lazy Loading 
+
+# Redux Toolkit
+- `npm install @reduxjs/toolkit`
+- `npm install react-redux`
+- Build our Store
+- Connect our Store to the app
+- Slice ( cartSlice )
+- Dispatch ( action )
+- Selector
