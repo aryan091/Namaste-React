@@ -2,48 +2,48 @@ import React , { useState , useEffect} from 'react';
 import { CDN_URL } from '../utils/constants';
 import { useDispatch } from 'react-redux';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
-import { ToastContainer, toast ,Bounce} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast ,Bounce} from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const ItemList = ({ items, isCart }) => {
   const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(0);
   console.log("Cart - ",isCart);
   
-  const notifySuccess = (msg) => {
-    toast.success(msg, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Bounce
-      });
-  };
+  // const notifySuccess = (msg) => {
+  //   toast.success(msg, {
+  //     position: "top-right",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: "dark",
+  //     transition: Bounce
+  //     });
+  // };
 
-  const notifyWarning = (msg) => {
-    toast.success(msg, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Bounce
-      });
-  };
+  // const notifyWarning = (msg) => {
+  //   toast.success(msg, {
+  //     position: "top-right",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: "dark",
+  //     transition: Bounce
+  //     });
+  // };
   const handleAction = (item) => {
     if (isCart) {
       dispatch(removeFromCart(item));
-      notifyWarning("Item Removed Successfully");
+     // notifyWarning("Item Removed Successfully");
     } else {
       dispatch(addToCart(item));
-      notifySuccess("Item Added Successfully");
+     // notifySuccess("Item Added Successfully");
     }
   };
 
@@ -64,7 +64,9 @@ const ItemList = ({ items, isCart }) => {
     
     <div>
       {items.map((item) => (
-        <div key={item.card.info.id} className="p-2 my-2 border-b-2 border-gray-200">
+        <div
+        data-testid="foodItems" 
+        key={item.card.info.id} className="p-2 my-2 border-b-2 border-gray-200">
           <div className="flex justify-between">
             <div className="mb-1 w-9/12">
               <div className="font-bold text-gray-600 text-left">
@@ -116,7 +118,7 @@ const ItemList = ({ items, isCart }) => {
   { totalPrice !== 0 ? <h1 className="text-gray-600 font-bold text-lg">Total Price : ₹{totalPrice}</h1> : null}
 </div>}
 
-<ToastContainer
+{/* <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -128,7 +130,7 @@ const ItemList = ({ items, isCart }) => {
         pauseOnHover
         theme="dark"
         transition="Bounce"
-      />
+      /> */}
 
 </div>
   );

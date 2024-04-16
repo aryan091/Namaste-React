@@ -24,7 +24,7 @@ const Body = () => {
 
       
       const json = await data.json()
-      console.log("JsonData - ",json)
+//console.log("JsonData - ",json)
 
       const resData = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
 
@@ -32,7 +32,7 @@ const Body = () => {
       setListOfRestaurants(resData)
       setFilteredRestaurant(resData)
 
-     console.log("ResData - ",resData)
+     //console.log("ResData - ",resData)
       
     }
     
@@ -68,15 +68,19 @@ const Body = () => {
     if(!onlineStatus){
       return <h1>🔴 OFFLINE</h1>
     }
+    
 
-
-    return listOfRestaurants.length === 0 ? <Shimmer/> : (
+    return listOfRestaurants.length === 0 ? (
+      <Shimmer />
+    ) : (
       
       <div className="body shadow-lg">
         
         <div className="filter flex items-center justify-center m-2 p-2 shadow-lg">
           <div className="search m-4 p-4">
-            <input type="text" 
+            <input 
+            type="text" 
+            data-testid  = "search-input"
             className="search-box border-solid border-black border-2 px-4 py-2 rounded-3xl" 
             value={searchText}
             onChange={handleSearchChange}
@@ -85,7 +89,7 @@ const Body = () => {
           </div>
 
           <div className="search m-4 p-4">
-            <button className=" px-4 py-2 bg-green-400 m-4 rounded-md shadow-lg" onClick={handleClick}>Top rated Restaurants</button>
+            <button className=" px-4 py-2 bg-green-400 m-4 rounded-md shadow-lg" onClick={handleClick}>Top Rated Restaurants</button>
             <button className=" px-4 py-2 bg-green-400 m-4 rounded-md shadow-lg" onClick={handleClickClear}>Clear Filter</button>
           </div>
 
