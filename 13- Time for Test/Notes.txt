@@ -20,6 +20,10 @@ Setting Up testing in our app
 - Configure Parcel config file to disable default Babel Transpilation - https://parceljs.org/languages/javascript/#babel
 - Jest Configuration - npx jest --init - https://jestjs.io/docs/getting-started
 - Install JsDom Library - npm install --save-dev jest-environment-jsdom - https://testing-library.com/docs/react-testing-library/setup#jest-28
+- Install npm i -D @babel/preset-react - Enabling JSX 
+- Include @babel/preset-react inside my Babel configuration
+- Install npm i -D @testing-library/jest-dom 
+- import "@testing-library/jest-dom";
 
 Parcel already uses `Babel` and it has its own configuration for Babel
 
@@ -82,3 +86,76 @@ Tests:       1 passed, 1 total
 Snapshots:   0 total
 Time:        1.083 s
 Ran all test suites.
+
+While testing React Components we will get below error
+
+SyntaxError: D:\Namaste React\13- Time for Test\__tests__\Contact.test.js: Support for the experimental syntax 'jsx' isn't currently enabled
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+
+- Install npm i -D @babel/preset-react - Enabling JSX 
+- Include @babel/preset-react inside my Babel configuration
+
+module.exports = {
+  presets: [
+    ["@babel/preset-env", { targets: { node: "current" } }],
+    ["@babel/preset-react", { runtime: "automatic" }],
+  ],
+};
+
+This Line - ["@babel/preset-react", { runtime: "automatic" }],
+
+Grouping of test case
+
+describe("Contact Component", () => {
+
+        test("should render", () => {
+                
+        })
+
+         test("should render", () => {
+                
+        })
+})
+
+We can write `it` with `describe` instead of `test`
+
+Lets test Header 
+when this Header component start rendering we will get a error
+
+
+  ● Should load Header Component
+                                                   
+    could not find react-redux context value; please ensure the component is wrapped in a <Provider>  
+
+Beacause it don't know about Redux
+
+So we will provide it with all the packages
+
+ render(
+        <BrowserRouter>
+          <Provider store={appStore}>
+            <Header />
+          </Provider>
+        </BrowserRouter>
+      );
+
+With Fire Event
+
+it("Should change Login Button to Logout on click", () => {
+  render(
+    <BrowserRouter>
+      <Provider store={appStore}>
+        <Header />
+      </Provider>
+    </BrowserRouter>
+  );
+
+  const loginButton = screen.getByRole("button", { name: "Login" });
+
+  fireEvent.click(loginButton);
+
+  const logoutButton = screen.getByRole("button", { name: "Logout" });
+
+  expect(logoutButton).toBeInTheDocument();
+});

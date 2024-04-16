@@ -1,11 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1713212336904" clover="3.2.0">
-  <project timestamp="1713212336905" name="All files">
-    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="3" coveredelements="3" complexity="0" loc="2" ncloc="2" packages="1" files="1" classes="1"/>
-    <file name="Sum.js" path="D:\Namaste React\13- Time for Test\src\components\Sum.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-    </file>
+<coverage generated="1713262326347" clover="3.2.0">
+  <project timestamp="1713262326347" name="All files">
+    <metrics statements="33" coveredstatements="27" conditionals="4" coveredconditionals="2" methods="14" coveredmethods="7" elements="51" coveredelements="36" complexity="0" loc="33" ncloc="33" packages="5" files="9" classes="9"/>
+    <package name="src.components">
+      <metrics statements="18" coveredstatements="16" conditionals="4" coveredconditionals="2" methods="7" coveredmethods="5"/>
+      <file name="Contact.js" path="D:\Namaste React\13- Time for Test\src\components\Contact.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="Header.js" path="D:\Namaste React\13- Time for Test\src\components\Header.js">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+      </file>
+      <file name="RestaurantCard.js" path="D:\Namaste React\13- Time for Test\src\components\RestaurantCard.js">
+        <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+      </file>
+      <file name="Sum.js" path="D:\Namaste React\13- Time for Test\src\components\Sum.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.context">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="UserContext.js" path="D:\Namaste React\13- Time for Test\src\context\UserContext.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.slices">
+      <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="cartSlice.js" path="D:\Namaste React\13- Time for Test\src\slices\cartSlice.js">
+        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="constants.js" path="D:\Namaste React\13- Time for Test\src\utils\constants.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="useOnlineStatus.js" path="D:\Namaste React\13- Time for Test\src\utils\useOnlineStatus.js">
+        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="store">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="appStore.js" path="D:\Namaste React\13- Time for Test\store\appStore.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

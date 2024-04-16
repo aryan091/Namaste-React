@@ -54,3 +54,7 @@
 - Configure Parcel config file to disable default Babel Transpilation 
 - Jest Configuration - npx jest --init
 - Install JsDom Library - npm install --save-dev jest-environment-jsdom
+- Install npm i -D @babel/preset-react - Enabling JSX 
+- Include @babel/preset-react inside my Babel configuration
+- Install npm i -D @testing-library/jest-dom 
+- import "@testing-library/jest-dom";
