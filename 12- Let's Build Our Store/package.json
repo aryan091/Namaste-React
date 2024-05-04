@@ -2,7 +2,6 @@
   "name": "app-store",
   "version": "1.0.0",
   "description": "In this episode we will learn about Redux Toolkit",
-  "main": "App.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
