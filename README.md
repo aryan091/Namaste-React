@@ -58,3 +58,17 @@
 - Include @babel/preset-react inside my Babel configuration
 - Install npm i -D @testing-library/jest-dom 
 - import "@testing-library/jest-dom";
+
+
+## Namaste Youtube
+- Debouncing
+
+## Debouncing with 200ms
+- If difference between 2 key strokes < 200ms - DECLINE API CALL 
+
+
+
+## Cache
+- Time Complexity to search in Array - O( n )
+- Time Complexity to search in Array - O( 1 )
+ 
